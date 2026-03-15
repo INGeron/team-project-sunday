@@ -1,0 +1,12 @@
+{
+  "name": "group-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass -w src/scss/:src/css/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
