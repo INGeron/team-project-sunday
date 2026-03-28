@@ -8,4 +8,44 @@
   text-decoration: none;
 }
 
+h4, h3 {
+  font-family: "el messiri", sans-serif;
+}
+
+iframe {
+  max-width: 330px;
+}
+
+.fullmenu {
+  border-radius: 20px;
+}
+.fullmenu .menu {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fullmenu .menu img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.fullmenu .menu .run {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.fullmenu .menu .km {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  flex-direction: column;
+}
+.fullmenu .line {
+  width: 90%;
+  height: 1px;
+  background-color: #d3d3d3;
+  margin: 20px auto;
+}
+
 /*# sourceMappingURL=style.css.map */
