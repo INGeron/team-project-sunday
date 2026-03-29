@@ -1,5 +1,7 @@
-@use '_default';
-@use 'colors' as *;
+@use 'default';
+@use 'colors';
+@use 'map';
+@use 'footer';
 @use "mixin" as *;
 @use 'main' as *;
 html {
