@@ -1,0 +1,38 @@
+@use 'colors' as *;
+footer{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: calc(100vw - 48px);
+    padding: 12px 24px;
+    align-items: center;
+    border-top: 1px solid rgba($color: $light-gray, $alpha: 0.2);
+    z-index: 100;
+    background-color: $white;
+    .link{
+        .text{
+            display: none;
+        }
+        &.active{
+            .text{
+                display: flex;
+            }
+            .icon{
+                display: none;
+            }
+        }
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .circle{
+        width: 6px;
+        height: 6px;
+        background-color: $orange;
+        border-radius: 18px;
+    }
+}
