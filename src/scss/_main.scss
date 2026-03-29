@@ -1,0 +1,47 @@
+@use 'colors' as *;
+header{
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .avatar{
+      width: 100px;
+      height: 100px;
+      background-color: #C04747;
+      border-radius: 50%;
+      position: relative;
+      .circle{
+        margin: 0;
+        position: absolute;
+        bottom: -7px;
+        right: -7px;
+        width: 25px;
+        height: 25px;
+        background-color: $orange;
+        border-radius: 50%;
+        border: 10px solid $white;
+      }
+    }
+    .greeting{
+      margin-left: 120px;
+      margin-bottom: 50px;
+      margin-top: -60px;
+      h2{
+        color: $white;
+      }
+      p{
+        color: $light-gray;
+      }
+    }
+    .calendar{
+      margin-left: 350px;
+      margin-top: -90px;
+    }
+  }
+  .Kcal{
+    .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }

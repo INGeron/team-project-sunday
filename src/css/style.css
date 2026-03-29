@@ -8,44 +8,93 @@
   text-decoration: none;
 }
 
-h4, h3 {
-  font-family: "el messiri", sans-serif;
+header {
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-
-iframe {
-  max-width: 330px;
-}
-
-.fullmenu {
-  border-radius: 20px;
-}
-.fullmenu .menu {
-  max-width: 300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.fullmenu .menu img {
-  width: 50px;
-  height: 50px;
+header .avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #C04747;
   border-radius: 50%;
+  position: relative;
 }
-.fullmenu .menu .run {
+header .avatar .circle {
   margin: 0;
-  font-size: 16px;
-  font-weight: 600;
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  width: 25px;
+  height: 25px;
+  background-color: #F15223;
+  border-radius: 50%;
+  border: 10px solid #FFFFff;
 }
-.fullmenu .menu .km {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 400;
+header .greeting {
+  margin-left: 120px;
+  margin-bottom: 50px;
+  margin-top: -60px;
+}
+header .greeting h2 {
+  color: #FFFFff;
+}
+header .greeting p {
+  color: #7F7F7F;
+}
+header .calendar {
+  margin-left: 350px;
+  margin-top: -90px;
+}
+
+.Kcal .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-.fullmenu .line {
-  width: 90%;
-  height: 1px;
-  background-color: #d3d3d3;
-  margin: 20px auto;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 48px;
+  font-weight: 900;
+}
+body h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 32px;
+  font-weight: 900;
+}
+body h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 700;
+}
+body h4 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+body h5 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+body p,
+body a,
+body input {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
