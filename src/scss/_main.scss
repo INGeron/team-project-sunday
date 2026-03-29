@@ -1,47 +1,159 @@
 @use 'colors' as *;
 header{
-    margin-left: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
     .avatar{
-      width: 100px;
-      height: 100px;
-      background-color: #C04747;
-      border-radius: 50%;
-      position: relative;
-      .circle{
-        margin: 0;
-        position: absolute;
-        bottom: -7px;
-        right: -7px;
-        width: 25px;
-        height: 25px;
-        background-color: $orange;
+        width: 58px;
+        height: 58px;;
+        background-color: #C04747;
         border-radius: 50%;
-        border: 10px solid $white;
-      }
+        position: relative;
+        .circle{
+            margin-right: 5px;
+            margin-top: -10px;
+            position: absolute;
+            bottom: -7px;
+            right: -7px;
+            width: 13px;
+            height: 13px;
+            background-color: $orange;
+            border-radius: 50%;
+            border: 5px solid $white;
+        }
     }
     .greeting{
-      margin-left: 120px;
-      margin-bottom: 50px;
-      margin-top: -60px;
-      h2{
-        color: $white;
-      }
-      p{
-        color: $light-gray;
-      }
+        margin-left: 80px;
+        margin-bottom: 30px;
+        margin-top: -50px;
+        h2{
+            color: $white;
+        }
+        p{
+            color: $light-gray;
+        }
     }
     .calendar{
-      margin-left: 350px;
-      margin-top: -90px;
+        margin-left: 300px;
+        margin-top: -90px;
     }
-  }
-  .Kcal{
+}
+.Kcal{
     .title{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 25px;
+        .total-kcal{
+            color: $light-gray;
+        }
     }
-  }
+    .row{
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .col{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .bottom-text{
+                color:$light-gray
+            }
+        }  
+    }
+    .stats{
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .bar{
+            width: 16px;
+            height: 146px;
+            background-color: #E9EDF7;
+            border-radius: 60px;
+            position: relative;
+            display: flex;
+            align-items: end;
+            .fill{
+                border-radius: 60px;
+                width: 100%;
+                background-color: $main-pink;
+                height: 60px;   
+            }
+            &:nth-child(1){
+                .fill{
+                    height: 86px;
+                    background-color: $black;
+                }
+            }
+            &:nth-child(3){
+                .fill{
+                    height: 110px;
+                    background-color: $black;
+                }
+            }
+            &:nth-child(5){
+                .fill{
+                    height: 74px;
+                    background-color: $black;
+                }
+            }
+            &:nth-child(7){
+                .fill{
+                    height: 104px;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+    .row-stats{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+        margin-bottom: 20px;
+        .dumbbell-stats{
+            width: 80px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: $main-pink;
+            border-radius: 12px;
+            h5{
+                color: $white
+            }
+            h4{
+                color: $white
+            }
+        }
+        .threadmil-stats, .rope-stats{
+            width: 80px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            border: 1px solid #E9EDF7;
+            border-radius: 12px;
+        }
+    }
+    
+}
+.my-plan{
+    margin-left: 24px;
+    .plan-text{
+        h4{
+            color: $light-gray
+        }
+    }
+    .plan-window{
+        
+    }
+}
