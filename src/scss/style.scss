@@ -1,2 +1,34 @@
-@use 'default';
-@use 'colors';
+@use '_default';
+@use 'colors' as *;
+@use "mixin" as *;
+@use 'main' as *;
+html {
+    scroll-behavior: smooth;
+}
+body {
+  h1 {
+    @include font-style(48px, 900);
+  }
+  h2 {
+    @include font-style(32px, 900);
+  }
+  h3 {
+    @include font-style(20px, 700);
+  }
+  h4 {
+    @include font-style(16px, 700);
+  }
+  h5 {
+    @include font-style(14px, 700);
+  }
+  p,
+  a,
+  input {
+    @include font-style(12px);
+  }
+}
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
