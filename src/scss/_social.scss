@@ -1,0 +1,35 @@
+@use './colors' as *;
+
+.myProfile{
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 48px 24px 0;
+        .hello{
+            flex-direction: column;
+            display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .den{
+flex-direction: column;
+            display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+}
+
+.poisk{
+    display: flex;
+     justify-content: space-between;
+     align-items: center;  
+     width: 350px ;
+     height: 58px;
+     margin-left: 50px;
+     border-radius: 30px;
+     border-color: $light-gray;
+     
+     h5{
+        margin-left: -60px;
+     }
+}
