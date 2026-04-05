@@ -1,0 +1,293 @@
+@use 'colors' as *;
+@use 'mixin' as *;
+
+// Variables
+$primary-pink: #ff4f8b;
+$light-pink: #f5d4e0;
+$dark-pink: #d4395e;
+$text-color: #333;
+$card-background: #ffffff;
+$shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 6px 16px rgba(0, 0, 0, 0.12);
+$border-radius: 16px;
+$border-radius-full: 50%;
+$font-family: 'Helvetica Neue', sans-serif;
+
+// Body-Back Content Styles
+.body-back-content {
+    font-family: $font-family;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Upper Section with Wavy Lines
+    .upper-section {
+        width: 100%;
+        background-color: $light-pink;
+        background-image: 
+            url('../img/bg.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-attachment: scroll;
+        padding: 30px 20px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+        position: relative;
+
+        // Background Image Block
+        .background-image-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+        // Avatar Section
+        .avatar-section {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+
+            width: 120px;
+            height: 120px;
+            border-radius: $border-radius-full;
+            background-color: white;
+        }
+
+        // Play Button Section
+        .play-button-section {
+            margin-bottom: -40px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+
+            .play-button {
+                width: 80px;
+                height: 80px;
+                border-radius: $border-radius-full;
+                background: linear-gradient(135deg, $primary-pink, darken($primary-pink, 10%));
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: $shadow-medium;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.08);
+                    box-shadow: 0 8px 20px rgba($primary-pink, 0.3);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+
+                svg {
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+
+    // Lower Section with White Background
+    .lower-section {
+        width: 100%;
+        background-color: $card-background;
+        padding: 60px 20px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 40px 40px 0 0;
+        overflow: hidden;
+
+        // Statistics Section
+        .statistics-section {
+            width: 100%;
+            max-width: 340px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 40px;
+
+            .stat-card {
+                background-color: #f5f5f5;
+                border-radius: $border-radius;
+                padding: 20px 16px;
+                box-shadow: $shadow-light;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-4px);
+                    box-shadow: $shadow-medium;
+                }
+
+                .heart-icon {
+                    width: 24px;
+                    height: 24px;
+                    margin-bottom: 12px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .fire-icon {
+                    width: 24px;
+                    height: 24px;
+                    margin-bottom: 12px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .lightning-icon {
+                    width: 24px;
+                    height: 24px;
+                    margin-bottom: 12px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .stat-value {
+                    @include font-style(26px, 700);
+                    color: $text-color;
+                    margin-bottom: 8px;
+                }
+
+                .stat-label {
+                    @include font-style(14px, 600);
+                    color: $primary-pink;
+                    margin-bottom: 4px;
+                }
+
+                .stat-period {
+                    @include font-style(11px, 400);
+                    color: #999;
+                    margin: 0;
+                }
+            }
+        }
+
+        // Information Section
+        .information-section {
+            width: 100%;
+            max-width: 340px;
+            background-color: #f5f5f5;
+            border-radius: $border-radius;
+            padding: 24px 20px;
+            box-shadow: $shadow-light;
+
+            .info-title {
+                @include font-style(24px, 700);
+                color: $text-color;
+                margin-bottom: 16px;
+            }
+
+            .info-description {
+                @include font-style(14px, 400);
+                color: #666;
+                line-height: 1.6;
+                margin: 0;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 600px) {
+    .body-back-content {
+        .upper-section {
+            padding: 20px 15px 0px;
+
+            .avatar-section {
+                margin-bottom: 30px;
+
+                .user-avatar {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .play-button-section {
+                margin-bottom: -40px;
+
+                .play-button {
+                    width: 70px;
+                    height: 70px;
+
+                    svg {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+
+        .lower-section {
+            padding: 60px 15px 30px;
+            border-radius: 40px 40px 0 0;
+            overflow: hidden;
+
+            .statistics-section {
+                max-width: 100%;
+                gap: 12px;
+
+                .stat-card {
+                    padding: 16px 12px;
+
+                    .heart-icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-bottom: 8px;
+                    }
+
+                    .fire-icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-bottom: 8px;
+                    }
+
+                    .lightning-icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-bottom: 8px;
+                    }
+
+                    .stat-value {
+                        @include font-style(22px, 700);
+                    }
+                }
+            }
+
+            .information-section {
+                max-width: 100%;
+                padding: 20px 16px;
+
+                .info-title {
+                    @include font-style(20px, 700);
+                    margin-bottom: 12px;
+                }
+
+                .info-description {
+                    @include font-style(13px, 400);
+                }
+            }
+        }
+    }
+}
