@@ -1,8 +1,11 @@
 @use 'colors' as *;
+@use 'footer' as *;
 header{
-    margin-left: 10px;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 48px);
+    padding: 48px 24px;
     .avatar{
         width: 58px;
         height: 58px;;
@@ -10,8 +13,6 @@ header{
         border-radius: 50%;
         position: relative;
         .circle{
-            margin-right: 5px;
-            margin-top: -10px;
             position: absolute;
             bottom: -7px;
             right: -7px;
@@ -23,19 +24,12 @@ header{
         }
     }
     .greeting{
-        margin-left: 80px;
-        margin-bottom: 30px;
-        margin-top: -50px;
         h2{
             color: $white;
         }
         p{
             color: $light-gray;
         }
-    }
-    .calendar{
-        margin-left: 300px;
-        margin-top: -90px;
     }
 }
 .Kcal{
@@ -146,14 +140,117 @@ header{
     }
     
 }
-.my-plan{
+.plan-text{
     margin-left: 24px;
-    .plan-text{
-        h4{
-            color: $light-gray
-        }
+    margin-bottom: 20px;
+    h4{
+        color: $light-gray
     }
+}
+.my-plan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
     .plan-window{
-        
+        width: 300px;
+        height: 130px;
+        border-radius: 24px;
+        padding: 24px;
+        background-color: #feeee9;
+        .plan-circle{
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(to bottom, $orange, rgba($color: $orange, $alpha: 0.66));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .plan-window-text{
+            margin-left: 70px;
+            margin-top: -56px;
+            h4{
+                color: $light-gray;
+            }
+        }
+        .next-exercise{
+            width: 100%;
+            height: 70px;
+            border-radius: 16px;
+            background-color: $white;
+            display: flex;
+            margin-top: 10px;
+            .next-exercise-icon{
+                margin-left: 20px;
+                margin-top: 20px;
+            }
+            .next-exercise-texts{
+                margin-left: 10px;
+                margin-top: 15px;
+                h5{
+                    color: $light-gray;
+                }
+            }
+        }
+
+    }
+}
+.modal-container{
+    background-color: rgba($color: $black, $alpha: 0.4);
+    // position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100vw;
+    .modal{
+        background-color: $light-pink;
+        background-image: url("../img/Illustration.png");
+        background-repeat: no-repeat;
+        .modal-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 48px);
+            padding: 40px 24px;
+            button{
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                &.back{
+                    border: 1px solid $light-gray;
+                }
+            }
+            .modal-header-texts{
+                flex-direction: column;
+            }
+        }
+        .modal-main{
+            padding:  0 24px;
+            .row{
+                display: flex;
+            }
+            .col{
+                width: calc(100% / 7);
+                aspect-ratio: 1 / 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.active{
+                    color: $white;
+                    background-color: $main-pink;
+                    border-radius: 50%;
+                }
+            }
+            .days{
+                color: $main-pink;
+                display: flex;
+                flex-direction: row;
+                .col.active{
+                    color: $black;
+                    background-color: transparent;
+                }
+            }            
+        }
     }
 }

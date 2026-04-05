@@ -1,35 +1,100 @@
 @use './colors' as *;
 
-.myProfile{
+.myProfile {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 24px 0;
+
+    .hello {
+        flex-direction: column;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 48px 24px 0;
-        .hello{
-            flex-direction: column;
-            display: flex;
+    }
+
+    .den {
+        flex-direction: column;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        }
-        .den{
-flex-direction: column;
-            display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
+    }
+
+    .hello {
+        color: $light-gray;
+    }
 }
 
-.poisk{
+.poisk {
     display: flex;
-     justify-content: space-between;
-     align-items: center;  
-     width: 350px ;
-     height: 58px;
-     margin-left: 50px;
-     border-radius: 30px;
-     border-color: $light-gray;
-     
-     h5{
-        margin-left: -60px;
-     }
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 64px);
+    height: 58px;
+    border: 1px solid $light-gray;
+    border-radius: 30px;
+    margin: 24px auto;
+    padding: 0 16px;
+
+    input {
+        width: 100%;
+        margin: 0 16px;
+        color: $light-gray;
+        height: 100%;
+    }
+}
+
+.public {
+    padding: 0 24px;
+
+    .friends {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 16px;
+
+        img {
+            padding: 8px;
+            width: 52px;
+            border-radius: 50%;
+            border: 1px solid $light-gray;
+
+            &.active {
+                border: 1px solid $main-pink;
+            }
+        }
+    }
+
+    .post {
+        border: 1px solid $light-gray;
+        padding: 20px;
+        border-radius: 8px;
+        .autor {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            margin-bottom: 24px;
+        }
+
+        .time {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img{
+            padding:16px  0 0;
+        }
+        .coment{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .icon{
+                display: flex;
+                gap: 8px;
+                align-items: center;
+            }
+        }
+    }
+
 }
