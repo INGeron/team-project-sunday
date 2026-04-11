@@ -6,6 +6,7 @@
 @use 'bodyback';
 @use "mixin" as *;
 @use 'main' as *;
+@use 'friendMass' as *;
 html {
     scroll-behavior: smooth;
 }
