@@ -1,0 +1,33 @@
+@use 'colors' as *;
+#start-workout-body{
+    background-image: url("../img/Illustration-2.png");
+    background-color: $light-pink;
+}
+.workout-list{
+    background-color: $white;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    padding: 20px;
+    padding-top: 60px;
+    .play{
+        position: absolute;
+        top: -32.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 40px);
+    }
+    .workout-type{
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        .icon{
+            gap: 12px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
