@@ -1,0 +1,36 @@
+@use 'colors' as *;
+.reward-container{
+    padding: 0 16px;
+
+    .cardReward{
+        background-color: rgba($color: $light-pink, $alpha: 0.7) ;
+        margin-top: 30px;
+        .yourPts{
+            
+            display: flex;
+            align-items: center;
+            h5{
+                color: $light-gray;
+            }
+            img{
+                width: 123px;
+                height: 100px;
+                margin-right: 10px;
+                margin-left: 32px;
+            }
+        }
+        .weekpoints{
+            display: flex;
+            h3{
+                font-size: 17px;
+                color: $light-gray;
+            }
+            h4{
+                margin-left: 60px;
+                font-size: 20px;
+            }
+        }
+        
+        
+    }
+}
