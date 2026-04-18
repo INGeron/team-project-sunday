@@ -1,14 +1,25 @@
 @use 'colors' as *;
+body{
+    background-color: white;
+}
 .reward-container{
     padding: 0 16px;
 
     .cardReward{
+        border-radius: 25px;
         background-color: rgba($color: $light-pink, $alpha: 0.7) ;
         margin-top: 30px;
+        min-height: 200px;
+        position: relative;
+        svg{
+            margin-top: 20px;
+            margin-left: 20px;
+        }
         .yourPts{
             
             display: flex;
             align-items: center;
+            margin-left: 30px;
             h5{
                 color: $light-gray;
             }
@@ -21,6 +32,7 @@
         }
         .weekpoints{
             display: flex;
+            margin-left: 30px;
             h3{
                 font-size: 17px;
                 color: $light-gray;
@@ -32,5 +44,38 @@
         }
         
         
+        
+        
+    }
+}
+
+.winners{
+    .weekwinner{
+        
+        display: flex;
+        gap: 200px;
+       margin-left: 30px;
+       h3{
+           margin-top: 50px;
+       }
+       svg{
+           margin-top: 50px;
+       }
+    }
+    .lastwinner{
+        border-radius: 25px;
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        border: 1px solid $light-gray;
+        height: 60px;
+        padding: 10px 10px;
+        
+        .besttime{
+            display: flex;
+        }
     }
 }
