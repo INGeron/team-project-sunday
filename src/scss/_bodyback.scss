@@ -13,28 +13,138 @@ $border-radius: 16px;
 $border-radius-full: 50%;
 $font-family: 'Helvetica Neue', sans-serif;
 
+// Body background with continuous waves
+body {
+    background-image: 
+        url('../img/bg.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: top left;
+    background-attachment: scroll;
+    background-color: $light-pink;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+// Header Styles
+header {
+    width: 100%;
+    background-color: transparent;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+
+    .mess {
+        flex: 1;
+        text-align: center;
+
+        h3 {
+            @include font-style(24px, 700);
+            color: $text-color;
+            margin: 0;
+        }
+    }
+
+    .tochka {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    svg {
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+// Page Header Styles
+.page-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background-color: transparent;
+    position: relative;
+
+    .page-title {
+        flex: 1;
+        text-align: center;
+        @include font-style(24px, 700);
+        color: $text-color;
+        margin: 0;
+    }
+
+    .header-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: $border-radius-full;
+        background-color: rgba(200, 200, 200, 0.3);
+        border: 1.5px solid rgba(150, 150, 150, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #666;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: rgba(200, 200, 200, 0.5);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .header-close {
+        margin-right: 10px;
+    }
+
+    .header-menu {
+        margin-left: 10px;
+    }
+}
+
 // Body-Back Content Styles
 .body-back-content {
     font-family: $font-family;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: transparent;
+    flex: 1;
+    width: 100%;
+    min-height: 100%;
 
     // Upper Section with Wavy Lines
     .upper-section {
         width: 100%;
-        background-color: $light-pink;
-        background-image: 
-            url('../img/bg.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-attachment: scroll;
+        background-color: transparent;
         padding: 30px 20px 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-size: cover;
         position: relative;
 
         // Background Image Block
@@ -43,8 +153,9 @@ $font-family: 'Helvetica Neue', sans-serif;
             top: 0;
             left: 0;
             right: 0;
+            bottom: 0;
             width: 100%;
-            height: 350px;
+            height: 100%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -59,8 +170,8 @@ $font-family: 'Helvetica Neue', sans-serif;
             position: relative;
             z-index: 1;
 
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: $border-radius-full;
             background-color: white;
         }
@@ -113,7 +224,10 @@ $font-family: 'Helvetica Neue', sans-serif;
         flex-direction: column;
         align-items: center;
         border-radius: 40px 40px 0 0;
+        flex: 1;
         overflow: hidden;
+        min-height: 100%;
+    }
 
         // Statistics Section
         .statistics-section {
@@ -125,10 +239,10 @@ $font-family: 'Helvetica Neue', sans-serif;
             margin-bottom: 40px;
 
             .stat-card {
-                background-color: #f5f5f5;
+                background-color: $card-background;
                 border-radius: $border-radius;
                 padding: 20px 16px;
-                box-shadow: $shadow-light;
+                box-shadow: none;
                 text-align: center;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -167,13 +281,23 @@ $font-family: 'Helvetica Neue', sans-serif;
                 .stat-value {
                     @include font-style(26px, 700);
                     color: $text-color;
+                    margin-bottom: 0;
+                    margin: 0;
+                }
+
+                .stat-value-group {
+                    display: flex;
+                    align-items: baseline;
+                    gap: 6px;
+                    justify-content: center;
                     margin-bottom: 8px;
                 }
 
                 .stat-label {
                     @include font-style(14px, 600);
-                    color: $primary-pink;
-                    margin-bottom: 4px;
+                    color: $text-color;
+                    margin: 0;
+                    padding: 0;
                 }
 
                 .stat-period {
@@ -188,10 +312,10 @@ $font-family: 'Helvetica Neue', sans-serif;
         .information-section {
             width: 100%;
             max-width: 340px;
-            background-color: #f5f5f5;
+            background-color: transparent;
             border-radius: $border-radius;
             padding: 24px 20px;
-            box-shadow: $shadow-light;
+            box-shadow: none;
 
             .info-title {
                 @include font-style(24px, 700);
@@ -207,10 +331,41 @@ $font-family: 'Helvetica Neue', sans-serif;
             }
         }
     }
-}
 
-// Responsive Design
 @media (max-width: 600px) {
+    header {
+        padding: 12px 15px;
+
+        .mess {
+            h3 {
+                @include font-style(20px, 700);
+            }
+        }
+
+        svg {
+            width: 48px !important;
+            height: 48px !important;
+        }
+    }
+
+    .page-header {
+        padding: 12px 15px;
+
+        .page-title {
+            @include font-style(20px, 700);
+        }
+
+        .header-btn {
+            width: 40px;
+            height: 40px;
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
     .body-back-content {
         .upper-section {
             padding: 20px 15px 0px;
@@ -219,8 +374,8 @@ $font-family: 'Helvetica Neue', sans-serif;
                 margin-bottom: 30px;
 
                 .user-avatar {
-                    width: 100px;
-                    height: 100px;
+                    width: 120px;
+                    height: 120px;
                 }
             }
 
@@ -250,6 +405,8 @@ $font-family: 'Helvetica Neue', sans-serif;
 
                 .stat-card {
                     padding: 16px 12px;
+                    background-color: $card-background;
+                    box-shadow: none;
 
                     .heart-icon {
                         width: 20px;
@@ -269,15 +426,31 @@ $font-family: 'Helvetica Neue', sans-serif;
                         margin-bottom: 8px;
                     }
 
+                    .stat-value-group {
+                        display: flex;
+                        align-items: baseline;
+                        gap: 6px;
+                        justify-content: center;
+                        margin-bottom: 8px;
+                    }
+
                     .stat-value {
                         @include font-style(22px, 700);
+                        margin: 0;
+                    }
+
+                    .stat-label {
+                        color: $text-color;
+                        margin: 0;
                     }
                 }
             }
 
             .information-section {
-                max-width: 100%;
-                padding: 20px 16px;
+                background-color: transparent;
+                box-shadow: none;;
+                padding: 20px;
+                margin: 0 15px;
 
                 .info-title {
                     @include font-style(20px, 700);

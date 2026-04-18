@@ -1,0 +1,29 @@
+@use './colors' as *;
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 23px 12px;
+}
+
+.msg-list{
+    padding:0 34px  ;
+    .card{
+        display: flex;
+        align-items: center;
+        margin-top: 32px ;
+        .name{
+            margin-left: 12px;
+            h4{
+                font-size: 14px;
+                margin-top: 10px ;
+                color: $light-gray;
+            }
+            h3{
+                font-size: 17px;
+                
+            }
+        }
+        
+    }
+}

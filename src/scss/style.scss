@@ -4,8 +4,11 @@
 @use 'footer';
 @use 'social';
 @use 'bodyback';
+@use 'start-workout';
 @use "mixin" as *;
 @use 'main' as *;
+@use 'friendMass' as *;
+@use 'rewards' as *;
 html {
     scroll-behavior: smooth;
 }
