@@ -9,7 +9,6 @@ function openModal(isOpen){
     }
 }
 
-// Закрытие модального окна по клику на кнопку "back"
 document.addEventListener('DOMContentLoaded', function(){
     const backButton = document.querySelector('.modal-header .back')
     if(backButton){
@@ -17,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
             openModal(false)
         })
     }
-    
-    // Закрытие модального окна по клику на фон
+
     const modalContainer = document.querySelector('.modal-container')
     if(modalContainer){
         modalContainer.addEventListener('click', function(e){
