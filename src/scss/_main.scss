@@ -203,6 +203,7 @@ header{
     left: 0;
     z-index: 99999;
     width: 100vw;
+    display: none;
     .modal{
         background-color: $light-pink;
         background-image: url("../img/Illustration.png");
