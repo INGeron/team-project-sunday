@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+        <header>
+        <a href="../../index.html" class="close">
+            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.1" cx="28.75" cy="28.75" r="28" stroke="#040415" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26 29L32 23M26 29L32 35" stroke="#040415" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <h3>Workouts</h3>
+        <button class="tochka">
+            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity="0.1" cx="28.75" cy="28.75" r="28" stroke="#040415" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="28.75" cy="24.75" r="1.5" fill="#040415"/>
+            <circle cx="28.75" cy="32.75" r="1.5" fill="#040415"/>
+            </svg>
+        </button>
+    </header>
+
+    <main class="payment-page">
+        <section class="promo-banner">
+            <div class="promo-content">
+                <h1 class="promo-title">Flat 50% <br> Discount</h1>
+                <p class="promo-desc">Shape your <br> body with <br> pump house</p>
+            </div>
+            <div class="promo-image">
+                <img src="../img/девушка.png" alt="Fitness Woman">
+            </div>
+        </section>
+
+        <section class="subscription">
+            <h2 class="sub-title">Unlock Unlimited Access</h2>
+            <p class="sub-desc">Activate this exercise so you can practice with your friends</p>
+
+            <div class="billing-toggle">
+                <button class="toggle-btn active">Yearly</button>
+                <button class="toggle-btn">Monthly</button>
+            </div>
+
+            <div class="plans">
+                <div class="plan-card">
+                    <h4 class="plan-name">Basic</h4>
+                    <div class="plan-price">
+                        <span class="price-val">$119.00</span>
+                        <span class="price-period">/Year</span>
+                    </div>
+                    <p class="plan-note">$9.99 /Month billed annually</p>
+                </div>
+
+                <div class="plan-card active">
+                    <h4 class="plan-name">Pro</h4>
+                    <div class="plan-price">
+                        <span class="price-val">$239.00</span>
+                        <span class="price-period">/Year</span>
+                    </div>
+                    <p class="plan-note">$19.99 /Month billed annually</p>
+                </div>
+            </div>
+        </section>
+
+        <button class="payment-btn">Payment</button>
+    </main>
+</body>
+</html>

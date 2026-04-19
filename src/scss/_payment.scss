@@ -1,0 +1,221 @@
+@use 'colors' as *;
+@use 'mixin' as *;
+
+.payment-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: $white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px; // Добавил боковые отступы
+    width: 100%;
+    box-sizing: border-box; // Чтобы padding не расширял ширину за 100%
+
+    h3 {
+        @include font-style(20px, 700);
+        color: $black;
+        margin: 0;
+        flex: 1;
+        text-align: center;
+    }
+
+    .close, .tochka {
+        background: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 58px; // Фиксированная ширина как у SVG
+        height: 58px;
+        
+        svg {
+            width: 58px;
+            height: 58px;
+            display: block;
+        }
+    }
+
+    .close {
+        justify-content: flex-start;
+    }
+
+    .tochka {
+        justify-content: flex-end;
+    }
+}
+
+.promo-banner {
+    background-color: #FF788E; // Розово-персиковый цвет
+    border-radius: 24px;
+    padding: 30px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: visible; // Разрешаем выход за границы
+    min-height: 200px;
+    margin-top: 40px; // Добавляем отступ сверху, чтобы голова не обрезалась краем экрана
+
+    .promo-content {
+        z-index: 2; // Текст остается поверх девушки
+        width: 65%;
+
+        .promo-title {
+            @include font-style(32px, 700);
+            color: $white;
+            margin-bottom: 12px;
+            line-height: 1.1;
+            text-transform: none;
+        }
+
+        .promo-desc {
+            @include font-style(16px, 400);
+            color: $white;
+            opacity: 1;
+            line-height: 1.4;
+        }
+    }
+
+    .promo-image {
+        position: absolute;
+        right: 10px; // Добавил небольшой отступ от правого края
+        bottom: 0;
+        height: 100%;
+        width: 55%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        z-index: 1; // Девушка за текстом, но на переднем плане баннера
+
+        img {
+            height: 130%; 
+            width: auto;
+            object-fit: contain;
+            display: block; 
+            transform: translateX(5%); // Уменьшил сдвиг вправо, чтобы локоть не уходил за экран
+            pointer-events: none; 
+        }
+    }
+}
+
+.subscription {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .sub-title {
+        @include font-style(18px, 700);
+        color: $black;
+    }
+
+    .sub-desc {
+        @include font-style(14px, 400);
+        color: $light-gray;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .billing-toggle {
+        background-color: #FFF5F6;
+        border-radius: 100px;
+        padding: 5px;
+        display: flex;
+        align-self: center;
+        width: 100%;
+        max-width: 300px;
+
+        .toggle-btn {
+            flex: 1;
+            padding: 12px 0;
+            border-radius: 100px;
+            @include font-style(14px, 700);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: none;
+            color: $black;
+
+            &.active {
+                background-color: $white;
+                color: $main-pink;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+
+    .plans {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .plan-card {
+            border: 1px solid #EAEAEA;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            .plan-name {
+                @include font-style(16px, 700);
+                margin-bottom: 10px;
+                color: $black;
+            }
+
+            .plan-price {
+                margin-bottom: 10px;
+                
+                .price-val {
+                    @include font-style(20px, 700);
+                    color: $black;
+                }
+                
+                .price-period {
+                    @include font-style(14px, 400);
+                    color: $light-gray;
+                }
+            }
+
+            .plan-note {
+                @include font-style(12px, 400);
+                color: $light-gray;
+                background-color: #F5F5F5;
+                padding: 10px;
+                border-radius: 0 0 20px 20px;
+                margin: 15px -20px -20px -20px;
+            }
+
+            &.active {
+                border: 2px solid $main-pink;
+                
+                .plan-name {
+                    color: $main-pink;
+                }
+
+                .plan-note {
+                    background-color: $main-pink;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.payment-btn {
+    background-color: $main-pink;
+    color: $white;
+    @include font-style(18px, 700);
+    padding: 18px;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0px 10px 20px rgba(255, 96, 121, 0.3);
+}
