@@ -1,0 +1,28 @@
+@use 'colors' as *;
+
+.notification-list{
+    .light-grey-text{
+        color: $light-gray;
+    }
+    .date-block{
+        position: relative;
+        padding: 24px;
+        .notification{
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $light-gray;
+            padding-bottom: 24px;
+            .content{
+                width: 100%;
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
